@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Webprog</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <!DOCTYPE html>
+  <html>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+  <ul>
+    <li><a href="index.html" class="active">CRUD</a></li>
+    <li><a href="2HTML5.html">HTML5</a></li>
+    <li><a href="3ChartJS.html">ChartJS</a></li>
+    <li><a href="4AJAX.html">AJAX</a></li>
+    <li><a href="5OOJS.html">OOJS</a></li>
+    <li><a href="6React.html">React</a></li>
+    </ul>
+  <h3>Új adat hozzáadása / szerkesztés</h3>
+  <form id="dataForm">
+    <input type="hidden" id="editIndex" value="" />
+    <label>Név: <input type="text" id="name" required minlength="2" maxlength="30" /></label><br />
+    <label>Kor: <input type="number" id="age" required min="1" max="120" /></label><br />
+    <label>Város: <input type="text" id="city" required minlength="2" maxlength="30" /></label><br />
+    <label>Pontszám: <input type="number" id="score" required min="0" max="100" /></label><br />
+    <button type="submit">Mentés</button>
+  </form>
+  <input type="text" id="search" placeholder="Keresés..." />
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Név</th>
+        <th onclick="sortTable(1)">Kor</th>
+        <th onclick="sortTable(2)">Város</th>
+        <th onclick="sortTable(3)">Pontszám</th>
+        <th>Művelet</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+  <footer>Maró Bence Dániel/HCARZA Kovács Márton Bence/N15T6L</footer>
+</body>
+
+</html>
