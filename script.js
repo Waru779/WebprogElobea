@@ -84,3 +84,4 @@ function sortTable(colIndex) {
 
   renderTable();
 }
+
