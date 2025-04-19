@@ -35,7 +35,7 @@ document.getElementById("load-plan").onclick = () => {
 
 // Web Worker
 document.getElementById("calc-distance").onclick = () => {
-  const worker = new Worker("worker.js");
+  const worker = new Worker("html5workers.js");
   worker.postMessage({ from: [47, 19], to: [48.8, 2.3] }); // Budapest -> Paris
   worker.onmessage = e => {
     document.getElementById("distance-result").textContent = `Távolság: ${e.data} km`;
