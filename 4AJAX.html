@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="hu">
 <head>
-    <meta charset="utf-8">
-    <title>Web-programozás-1 Előadás Házi feladat</title>
-    <link type="text/css" rel="stylesheet" href="alapstyle.css">
+  <meta charset="UTF-8">
+  <title>Webprog</title>
+  <link type="text/css" rel="stylesheet" href="alapstyle.css">
+  <script src="ajax.js" defer></script>
 </head>
-
 <body>
     <header>
-        <h1 class="header">Header...</h1>
-    </header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+      </header>
+      <ul>
+        <li><a href="1CRUD.html">CRUD</a></li>
+        <li><a href="2HTML5.html">HTML5</a></li>
+        <li><a href="3ChartJS.html">ChartJS</a></li>
+        <li><a href="4AJAX.html" class="active">AJAX</a></li>
+        <li><a href="5OOJS.html">OOJS</a></li>
+        <li><a href="6React.html">React</a></li>
+      </ul>
+  <h1>AJAX – Adatkezelés API-val</h1>
 
-    <nav>
-        <ul>
-            <li><a href="1CRUD.html">CRUD</a></li>
-            <li><a href="2HTML5.html">HTML5</a></li>
-            <li><a href="3ChartJS.html">ChartJS</a></li>
-            <li><a href="4AJAX.html" class="active">AJAX</a></li>
-            <li><a href="5OOJS.html">OOJS</a></li>
-            <li><a href="6React.html">React</a></li>
-        </ul>
-    </nav>
-    <aside>
-        <h1>Introduction</h1>
-    </aside>
-    <section>
-        <h1>Introduction page</h1>
-        <article>
-            <h2>Aenean nummy odio orci</h2>
-            <p>Phasellus wisi nulla...</p>
-        </article>
-        <article>
-            <h2>Aenean nummy odio orci</h2>
-            <p>Adipiscing elit praesent...</p>
-        </article>
-    </section>
-    <footer>Maró Bence Dániel/HCARZA Kovács Márton Bence/N15T6L</footer>
+  <div>
+    <label>Név: <input type="text" id="name"></label><br>
+    <label>Magasság: <input type="text" id="height"></label><br>
+    <label>Súly: <input type="text" id="weight"></label><br>
+    <label>ID (csak Update/Delete): <input type="text" id="id"></label><br><br>
+
+    <button onclick="create()">Create</button>
+    <button onclick="read()">Read</button>
+    <button onclick="update()">Update</button>
+    <button onclick="del()">Delete</button>
+  </div>
+
+  <div id="output"></div>
+  <footer>Maró Bence Dániel/HCARZA Kovács Márton Bence/N15T6L</footer>
 </body>
-
 </html>
