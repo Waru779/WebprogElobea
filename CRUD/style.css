@@ -1,4 +1,8 @@
-
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color:skyblue;
+}
 style.css .employee-form {
     border-style: solid;
 
@@ -25,6 +29,7 @@ body>table {
 
 table {
     border-collapse: collapse;
+    background-color:darkcyan
 }
 
 table.list {
