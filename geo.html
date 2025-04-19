@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="alapstyle.css">
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+</head>
+<body>
+  <h1>Geolocation API példa</h1>
+  <button onclick="getLocation()">Helyzet lekérése</button>
+  <p id="location"></p>
+  <script>
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude } = pos.coords;
+          document.getElementById("location").textContent = `Szélesség: ${latitude}, Hosszúság: ${longitude}`;
+        },
+        () => alert("Helymeghatározás nem elérhető")
+      );
+    }
+  </script>
+  <a href="2HTML5.html">Vissza</a>
+</body>
+</html>

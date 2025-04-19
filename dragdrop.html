@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="alapstyle.css">
+  <meta charset="UTF-8">
+  <title>Drag and Drop</title>
+  <style>
+    #box {
+      width: 100px; height: 100px;
+      background: red;
+      margin-bottom: 10px;
+    }
+    #target {
+      width: 200px; height: 200px;
+      border: 2px dashed #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="box" draggable="true">Húzz ide!</div>
+  <div id="target"></div>
+  <script>
+    const box = document.getElementById("box");
+    const target = document.getElementById("target");
+
+    box.addEventListener("dragstart", e => e.dataTransfer.setData("text", "box"));
+    target.addEventListener("dragover", e => e.preventDefault());
+    target.addEventListener("drop", e => {
+      e.preventDefault();
+      target.appendChild(box);
+    });
+  </script>
+  <a href="2HTML5.html">Vissza</a>
+</body>
+</html>
